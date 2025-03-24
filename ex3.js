@@ -78,3 +78,12 @@ const users = [
  * Recorre el array de usuarios y encuentra aquél usuario que tiene más 'skills' de todos.
  * El resultado de tu búsqueda debería ser Asab.
  */
+let mostSkilledUser = users[0]; 
+
+for (let i = 1; i < users.length; i++) {
+  if (users[i].skills.length > mostSkilledUser.skills.length) {
+    mostSkilledUser = users[i]; 
+  }
+}
+
+console.log("El usuario con más skills es:", mostSkilledUser.name);
